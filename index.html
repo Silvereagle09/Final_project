@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech-to-Text — Realtime + Upload</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="title">Speech-to-Text </h1>
+
+    <!-- UPLOAD SECTION -->
+    <div class="glass-card">
+        <h2>Upload a file</h2>
+
+        <!-- FIXED ROW: choose file + filename + transcribe button -->
+        <div class="upload-row">
+            <label for="audioFile" class="upload-box">📁 Choose Audio File</label>
+            <input type="file" id="audioFile" class="hidden-file">
+            <span id="fileName" class="file-name">No file chosen</span>
+
+            <button id="uploadBtn" class="btn primary">Transcribe File</button>
+        </div>
+
+        <textarea id="uploadResult" class="output-box" placeholder="Upload transcription appears here..."></textarea>
+    </div>
+
+    <!-- REALTIME SECTION -->
+    <div class="glass-card">
+        <h2>Realtime microphone capture</h2>
+
+        <div class="btn-row">
+            <button id="startBtn" class="btn primary">Start Recording</button>
+            <button id="stopBtn" class="btn danger" disabled>Stop Recording</button>
+            <button id="clearBtn" class="btn">Clear</button>
+        </div>
+
+        <h3>Live partial (fast):</h3>
+        <textarea id="partialBox" class="output-box" placeholder="Live partial transcript..."></textarea>
+
+        <h3>Final (punctuated):</h3>
+        <textarea id="finalBox" class="output-box" placeholder="Final transcript appears here..."></textarea>
+    </div>
+
+</div>
+
+<script src="static/script.js"></script>
+
+</body>
+</html>

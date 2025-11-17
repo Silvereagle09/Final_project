@@ -1,0 +1,187 @@
+/* ------------- GLOBAL SETTINGS ------------- */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #dbe3ff, #f3e8ff);
+    margin: 0;
+    padding: 40px;
+    color: #2a2f38;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 46px;
+    font-weight: 750;
+    margin-bottom: 35px;
+    letter-spacing: 0.5px;
+}
+
+.title span {
+    font-weight: 300;
+    opacity: 0.85;
+}
+
+/* ------------- GLASS CARDS ------------- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 45px;
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* ------------- BUTTONS ------------- */
+.btn {
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #3b4556;
+    backdrop-filter: blur(10px);
+    margin-right: 12px;
+    transition: background 0.3s, transform 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+    background: rgba(180, 195, 218, 0.85);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* Special button colors */
+.primary {
+    background: rgba(184, 197, 255, 0.45);
+}
+
+.primary:hover:not(:disabled) {
+    background: rgba(141, 157, 255, 0.85);
+}
+
+.danger {
+    background: rgba(255, 180, 180, 0.45);
+}
+
+.danger:hover:not(:disabled) {
+    background: rgba(255, 120, 120, 0.8);
+    color: #fff;
+}
+
+/* ------------- TEXT AREA OUTPUT ------------- */
+.output-box {
+    width: 100%;
+    height: 120px;
+    margin-top: 12px;
+    border-radius: 12px;
+    padding: 14px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.38);
+    backdrop-filter: blur(10px);
+    color: #1e1e1e;
+    font-size: 15px;
+    font-weight: 500;
+    resize: vertical;
+    outline: none;
+}
+
+/* File input hidden */
+.hidden-file {
+    display: none;
+}
+
+/* Upload row: PERFECT horizontal alignment */
+.upload-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+/* Glass upload box */
+.upload-box {
+    display: inline-block;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    transition: 0.25s;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.upload-box:hover {
+    background: rgba(230, 216, 255, 0.95);
+}
+
+/* Selected file name */
+.file-name {
+    opacity: 0.9;
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Row for buttons */
+.btn-row {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ------------- MOBILE RESPONSIVENESS ------------- */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .upload-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .upload-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .file-name {
+        margin: 0;
+    }
+}
